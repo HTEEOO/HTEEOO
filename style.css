@@ -7,6 +7,21 @@
         flex-direction: column;
         text-align: center;
     }
+    #toggle{
+        display: block;
+    }
+    nav{
+        display: none;
+    }
+}
+
+#toggle{
+    background: #f57f26;
+    text-align: right;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
     
 }
 
