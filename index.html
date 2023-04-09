@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reponsive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -19,40 +18,85 @@
 </head>
 
 <body>
-    <section class="main">
-       
-            <div id="toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+    <div class="dautien1">
+        <a href="https://www.facebook.com/ispace.vn">
+            <i style="color: white;" class="fab fa-facebook-f fa-2x"></i></a>
 
-            <nav class="navbar fixed-top navbar" style="background-color: white;">
-                <a href="index.html"><img src="image/logo.png">
-                    <div class="menu">
-                        <ul id="main-menu">
-                            <li><a href="#gioithieu">GIỚI THIỆU</a></li>
-                            <li><a href="#tuyensinh">PHƯƠNG THỨC TUYỂN SINH</a></li>
-                            <li><a href="#nghanh1">NGHÀNH ĐÀO TẠO</a></li>
-                            <li><a href="#hocphi">HỌC PHÍ</a></li>
-                            <li><a href="#lienhe">LIÊN HỆ</a></li>
-                        </ul>
-                    </div>
-            </nav> <!--end navbar-->    
+        <a href="https://www.youtube.com/user/ispacechannel">
+            <i style="padding-left: 20px; color: white;" class="fab fa-youtube fa-2x"></i>
 
-        <div>
-            <img style="width: 100%; padding-top: 100px;" src="image/anhnen.jpg" alt="">
+            <a href="https://twitter.com/ispace_vn">
+                <i style="padding-left: 20px; color: white;" class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://ispace.edu.vn/">
+                <i style="color: white;" class="fas fa-link fa-2x"></i>
+            </a>
+    </div>
+
+    <header>
+        <div class="logo"><img style="width: 300px;" src="image/logo.png"></div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="#gioithieu">GIỚI THIỆU</a>
+                </li>
+                <li>
+                    <a href="#tuyensinh">PHƯƠNG THỨC TUYỂN SINH</a>
+                </li>
+                <li>
+                    <a href="#nghanh1">NGHÀNH ĐÀO TẠO</a>
+                </li>
+                <li>
+                    <a href="#hocphi">HỌC PHÍ</a>
+                </li>
+                <li>
+                    <a href="#lienhe">LIÊN HỆ</a>
+                </li>
+            </ul>
 
+        </nav><!--end nav-bar -->
+    </header><!--end header-->
 
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function () {
+            navbar = document.querySelector(".nav-bar")
+            navbar.classList.toggle("active");
+        }                             
+    </script>
 
+    <div class="image">
+        <img style="max-width:100%;height:auto;" id="img" onclick="changeImage" src="anhnen.jpg" alt="">
+    </div>
 
+    <script>
+        var index = 1;
+        function changeImage() {
+            var imgs = ["anhnen.jpg", "anhdong2.jpg", "anhdong1.jpg"];
+            document.getElementById('img').src = imgs[index];
+            index++;
+            if (index == 3) {
+                index = 0;
+            }
+        }
+        setInterval(changeImage, 3000);
+
+    </script>
+
+    <!--bootstrap-->
+    <div class="container-fluid">
         <div class="hangdau">
-            <div class="row " id="gioithieu"
-                style="display: flex; padding-left: 90px;  font-size: 15px;  padding-top: 5px;">
-                <div class="col-6">
+            <div class="row " id="gioithieu" style="display: flex;  text-align: justify; font-size: 15vm; padding-bottom: 80px; padding-top: 70px; color: black; background:#f1f1f1;
+                border: none;">
+                <div class="col-md-6">
 
                     <h2 class="chu">GIỚI THIỆU CHUNG</h2>
                     <p class="doimau">Trường Cao đẳng An ninh mạng ISPACE</p>
-                    <hr width="50%" size="1px" style="color: #f57f26">
+                    <hr width="50%" size="1px" style="color: #f57f26;">
                     <p class="doimau">Trường Cao Đẳng An ninh mạng iSPACE là đơn vị tiên phong trong đào tạo thực hành
                         từ
                         năm 2008
@@ -69,27 +113,35 @@
                         hiện đại và sáng tạo theo xu hướng trường học quốc tế.
 
                     </p>
+                </div><!--end col-6-->
+
+                <div class="col-md-6">
+                    <img src="image/anh.png" width="100%" height="400px"
+                        style="border-radius: 8px; text-align: center;">
                 </div>
-                <div class="col-4">
-                    <img src="image/anh.png" width="600px" height="400px" style="border-radius: 8px;">
+                <div>
+                    <div class="bonhinhanh" style="font-size:25px; font-weight: 700; padding-top: 50px;">
+                        <div class="col-md-3" style="text-align: center;"><img src="image/icon1.png" alt="">99%</div>
+                        <div class="col-md-3" style="text-align: center;"><img src="image/icon2.png" alt="">14,987</div>
+                        <div class="col-md-3" style="text-align: center;"><img src="image/icon3.png" alt="">70%</div>
+                        <div class="col-md-3" style="text-align: center;"><img src="image/icon4.png" alt="">13 Năm</div>
+                    </div>
                 </div>
-                <div class="bonhinhanh" style="font-size:30px; font-weight: 700; padding-top: 50px;">
-                    <div style="padding-left:5px ;"><img src="image/icon1.png" alt="">99%</div>
-                    <div style="padding-left:55px ;"><img src="image/icon2.png" alt="">14,987</div>
-                    <div style="padding-left:0px ;"><img src="image/icon3.png" alt="">70%</div>
-                    <div><img src="image/icon4.png" alt="">13 Năm</div>
+                <div class="row">
+                    <div class="bonchu" style="font-size:13px; font-weight: 500;">
+                        <div class="col-md-3" style="text-align: center;">SINH VIÊN CÓ <br> VIỆC LÀM NGAY</div>
+                        <div class="col-md-3" style="text-align: center">SINH VIÊN ĐƯỢC <br> ĐÀO TẠO</div>
+                        <div class="col-md-3" style="text-align: center">THỰC HÀNH </div>
+                        <div class="col-md-3" style="text-align: center">KINH NGHIỆM <br> ĐÀO TẠO</div>
+                    </div>
                 </div>
-                <div class="bonchu" style="font-size:13px; font-weight: 500;">
-                    <div style="padding-right:50px ;">SINH VIÊN CÓ VIỆC LÀM NGAY</div>
-                    <div style="padding-right:50px ;">SINH VIÊN ĐƯỢC ĐÀO TẠO</div>
-                    <div style="padding-right:50px ;">THỰC HÀNH </div>
-                    <div style="padding-right:35px ;">KINH NGHIỆM ĐÀO TẠO</div>
-                </div>
-            </div>
+            </div><!--end hang dau-->
         </div><!--end hang dau-->
 
+        
+
         <div class="tuyensinh1" id="tuyensinh">
-            <div style="text-align: center; color: #f57f26 ; font-size: 30px; font-weight: 500;padding-top: 100px;">
+            <div style="text-align: center; color: #f57f26 ; font-size: 30px; font-weight: 500;padding-top: 53px;">
                 <p>ĐỐI TƯỢNG TUYỂN SINH</p>
             </div>
             <div style="text-align: center; font-size: 20px;">
@@ -97,189 +149,184 @@
             </div>
 
             <div class="row align-items-start">
-                <div class="col-5">
-                    <p style="text-align: center; color: #f57f26 ; font-size: 30px; font-weight: 500;">PHƯƠNG THỨC TUYỂN
+                <div class="col-md-6" style="text-align: center;">
+                    <p style=" color: #f57f26 ; font-size: 30px; font-weight: 500;">PHƯƠNG THỨC TUYỂN
                         SINH:</p>
-                    <ul style="padding-left: 90px; font-size: 20px;">
-                        <p>• Xét tuyển học bạ THPT</p>
+                    <ul style=" font-size: 20px;">
                         <p>• Xét điểm thi THPT Quốc gia</p>
+                        <p>• Xét tuyển học bạ THPT</p>
                     </ul>
                 </div>
 
-                <div class="col-7">
-                    <p style="text-align: center; color: #f57f26 ; font-size: 30px; font-weight: 500;">HẠN CUỐI NHẬN HỒ
+                <div class="col-md-6" style="text-align: center;">
+                    <p style=" color: #f57f26 ; font-size: 30px; font-weight: 500;">HẠN CUỐI NHẬN HỒ
                         SƠ:</p>
-                    <ul style="padding-left: 240px; font-size: 20px;">
+                    <ul style="font-size: 20px;">
                         <p>• Theo chỉ tiêu xét tuyển của nhà trường.</p>
                         <p>• Ưu tiên hồ sơ đăng ký sớm.</p>
 
                     </ul>
                 </div>
-            </div>
+            </div><!--end col-5-->
 
 
             <div class="hoso" style="padding-top: 50px; ">
-
-                <p style="text-align: center; color: #f57f26; font-size: 30px; font-weight: 500;;"> HỒ SƠ XÉT TUYỂN</p>
-                    
-                        <div style="padding-left: 350px; font-size: 17px;" class="row">
-                            <div class="col-8" style="border: 5px solid #f57f26;">
-                            <p>• Phiếu đăng ký nhập học (download <a
-                                    href="https://drive.google.com/file/d/1Rb_cztOObgIuDAYZZRj0XXnEcmdRDVBq/view?usp=sharing">tại
-                                    đây</a>)<br><br />• Biên nhận hồ sơ (download <a
-                                    href="https://drive.google.com/file/d/1mOX9BDwZcTe2qyP0DRDLDe_EWe6haWH0/view?usp=sharing">tại
-                                    đây</a>)<br><br />• <a
-                                    href="https://drive.google.com/file/d/1pXraNyYM2eco93bcMQFhDqg-L68YG4up/view?usp=sharing">Sơ
-                                    yếu lý lịch có xác nhận của địa phương</a> <br> <br />• Bản sao chứng thực CMND <br>
-                                <br />•
-                                Bản sao
-                                chứng thực giấy khai sinh <br> <br />• Bản sao chứng thực hộ khẩu <br> <br />• 4 ảnh
-                                3&#215;4
-                                <br> <br />• Bản sao
-                                chứng thực học bạ <br><br />• Bản sao chứng thực bằng tốt nghiệp THPT hoặc giấy chứng
-                                nhận tốt
-                                nghiệp
-                                THPT tạm thời <br><br />• Phí ghi danh &amp; Học phí học kỳ 1
-                            </p>
-                        </div>
-                        </div>
-                  
-                
-            </div>
-
-
-
-            <br>
-            <div>
-                <div style="padding-left: 100px;">
-                    <p style=" color: #f57f26; font-weight: 500; font-size: 30px;">PHƯƠNG THỨC NỘP HỒ SƠ TUYỂN SINH</p>
-                    <div style="font-size: 20px;">
-                        <p>• Thí sinh nộp hồ sơ trực tiếp tại văn phòng Tuyển sinh nhà trường</p>
-                        <p>• Thí sinh nộp hồ sơ qua đường bưu điện</p>
-                        <p>Trường Cao đẳng An ninh mạng iSPACE</p>
-                        <p>240 Võ Văn Ngân, phường Bình Thọ, TP. Thủ Đức, TP. HCM</p>
-                        <p>Hotline: 0938.205.966</p>
+                <div class="row">
+                    <p style="text-align: center; color: #f57f26; font-size: 30px; font-weight: 500;;"> HỒ SƠ XÉT TUYỂN
+                    </p>
+                </div>
+                <div class="row justify-content-md-center" style=" font-size: 17px; padding-bottom: 80px;">
+                    <div class="col-md-auto" style="border: 10px solid #f57f26;">
+                        <p>• Phiếu đăng ký nhập học (download <a
+                                href="https://drive.google.com/file/d/1Rb_cztOObgIuDAYZZRj0XXnEcmdRDVBq/view?usp=sharing">tại
+                                đây</a>)<br><br />• Biên nhận hồ sơ (download <a
+                                href="https://drive.google.com/file/d/1mOX9BDwZcTe2qyP0DRDLDe_EWe6haWH0/view?usp=sharing">tại
+                                đây</a>)<br><br />• <a
+                                href="https://drive.google.com/file/d/1pXraNyYM2eco93bcMQFhDqg-L68YG4up/view?usp=sharing">Sơ
+                                yếu lý lịch có xác nhận của địa phương</a> <br> <br />• Bản sao chứng thực CMND <br>
+                            <br />•
+                            Bản sao
+                            chứng thực giấy khai sinh <br> <br />• Bản sao chứng thực hộ khẩu <br> <br />• 4 ảnh
+                            3&#215;4
+                            <br> <br />• Bản sao
+                            chứng thực học bạ <br><br />• Bản sao chứng thực bằng tốt nghiệp THPT hoặc giấy chứng
+                            nhận tốt
+                            nghiệp
+                            THPT tạm thời <br><br />• Phí ghi danh &amp; Học phí học kỳ 1
+                        </p>
                     </div>
                 </div>
-            </div>
-        </div>
 
 
+            </div><!--end ho so-->
+
+            <hr style="width: 700px; height: 3px; background-color:#f87e04; margin:auto; ">
+
+        </div><!--end tuyen sinh-->
 
         <div class="nghanh" id="nghanh1">
-            <div class="row">
-                <div style="text-align: center; font-size:35px; color: #f57f26; font-weight: 500;">
-                    NGHÀNH ĐÀO TẠO
-                </div>
+            <div class="anhh2">
+                <div class="row" style="padding-bottom: 60px;">
+                    <div style="text-align: center; font-size:35px; color: #f57f26; font-weight: 500;">
+                        NGHÀNH ĐÀO TẠO
+                    </div>
 
-                <div class="col">
-                    <div><img src="image/nghanh1.png"></div>
-                    <div>
-                        <p>NGÀNH AN NINH MẠNG</p>
+                    <div class="col">
+                        <div><img src="image/nghanh1.png"></div>
+                        <div>
+                            <p style="font-weight: 800;font-size: larger;">NGÀNH AN NINH MẠNG</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div><img src="image/nghanh2.png"></div>
-                    <div>
-                        <p>NGÀNH QUẢN TRỊ DỊCH VỤ CNTT</p>
+                    <div class="col">
+                        <div><img src="image/nghanh2.png"></div>
+                        <div>
+                            <p style="font-weight: 800;font-size: larger;">NGÀNH QUẢN TRỊ DỊCH VỤ CNTT</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div><img src="image/nghanh3.png"></div>
-                    <div>
-                        <p>NGÀNH PHÁT TRIỂN PHẦN MỀM</p>
+                    <div class="col">
+                        <div><img src="image/nghanh3.png"></div>
+                        <div>
+                            <p style="font-weight: 800;font-size: larger;">NGÀNH PHÁT TRIỂN PHẦN MỀM</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div><img src="image/nghanh4.png"></div>
-                    <div>
-                        <p>NGÀNH THIẾT KẾ ĐỒ HỌA</p>
+                    <div class="col">
+                        <div><img src="image/nghanh4.png"></div>
+                        <div>
+                            <p style="font-weight: 800;font-size: larger;">NGÀNH THIẾT KẾ ĐỒ HỌA</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div><!--end nghanh-->
+
+        <hr style="width: 700px; height: 3px; background-color:#f87e04; margin:auto; ">
 
         <div class="hocphi" id="hocphi">
-            <h1 style="color:#f57f26" text-align="center" class="mt-5">HỌC PHÍ CAO ĐẲNG CHÍNH QUY NĂM 2023</h1> <br>
-            <table class="table table-bordered">
-                <thead class="hocphi-iteam1">
-                    <tr>
-                        <th scope="col">STT</th>
-                        <th scope="col">HỌC KỲ</th>
-                        <th scope="col">HỌC PHÍ</th>
-                        <th scope="col">PHÍ TIẾNG ANH</th>
-                        <th scope="col">PHÍ ƯU ĐÃI</th>
-                        <th scope="col">PHÍ THỰC ĐÓNG</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td> Học kỳ 1</td>
-                        <td> 8.500.000</td>
-                        <td> </td>
-                        <td> 4.000.000</td>
-                        <td> 4.500.000</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td> Học kỳ 2</td>
-                        <td> 8.500.000</td>
-                        <td> </td>
-                        <td> 700.000</td>
-                        <td> 7.800.000</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td> Học kỳ 3</td>
-                        <td> 8.500.000</td>
-                        <td> 2.000.000</td>
-                        <td> 700.000</td>
-                        <td> 9.800.000</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td> Học kỳ 4</td>
-                        <td> 8.500.000</td>
-                        <td> 2.000.000</td>
-                        <td> 700.000</td>
-                        <td> 9.800.000</td>
+            <p style="color:#f57f26; font-size: 40px" text-align="center" class="mt-5"> HỌC PHÍ CAO ĐẲNG CHÍNH QUY NĂM
+                2023</p> <br>
+            <div class="row">
+                <table class="table table-bordered">
+                    <div class="col-md-12">
+                        <thead class="hocphi-iteam1" style="background-color: #f57f26; color: aliceblue;">
+                            <tr>
+                                <th scope="col" style="font-size: 12px;">STT</th>
+                                <th scope="col" style="font-size: 12px;">HỌC KỲ</th>
+                                <th scope="col" style="font-size: 12px;">HỌC PHÍ</th>
+                                <th scope="col" style="font-size: 12px;">PHÍ TIẾNG ANH</th>
+                                <th scope="col" style="font-size: 12px;">PHÍ ƯU ĐÃI</th>
+                                <th scope="col" style="font-size: 12px;">PHÍ THỰC ĐÓNG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="font-size: 12px;">
+                                <th scope="row-md">1</th>
+                                <td> Học kỳ 1</td>
+                                <td> 8.500.000</td>
+                                <td> </td>
+                                <td> 4.000.000</td>
+                                <td> 4.500.000</td>
+                            </tr>
+                            <tr style="font-size: 12px;">
+                                <th scope="row-md">2</th>
+                                <td> Học kỳ 2</td>
+                                <td> 8.500.000</td>
+                                <td> </td>
+                                <td> 700.000</td>
+                                <td> 7.800.000</td>
+                            </tr>
+                            <tr style="font-size: 12px;">
+                                <th scope="row-md">3</th>
+                                <td> Học kỳ 3</td>
+                                <td> 8.500.000</td>
+                                <td> 2.000.000</td>
+                                <td> 700.000</td>
+                                <td> 9.800.000</td>
+                            </tr>
+                            <tr style="font-size: 12px;">
+                                <th scope="row-md">4</th>
+                                <td> Học kỳ 4</td>
+                                <td> 8.500.000</td>
+                                <td> 2.000.000</td>
+                                <td> 700.000</td>
+                                <td> 9.800.000</td>
 
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td> Học kỳ 5</td>
-                        <td> 8.500.000</td>
-                        <td> 2.000.000</td>
-                        <td> 700.000</td>
-                        <td> 9.800.000</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td> Học kỳ 6</td>
-                        <td> 8.500.000</td>
-                        <td> </td>
-                        <td> 700.000</td>
-                        <td> 7.800.000</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">7</th>
-                        <td> Học kỳ 7</td>
-                        <td> 9.000.000</td>
-                        <td> </td>
-                        <td> 1.200.000</td>
-                        <td> 7.800.000</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">8</th>
-                        <td> Tổng cộng</td>
-                        <td> 60.000.000</td>
-                        <td> 6.000.000</td>
-                        <td> 8.700.000</td>
-                        <td> 57.300.000</td>
-                    </tr>
-                </tbody>
-            </table>
+                            </tr>
+                            <tr style="font-size: 12px;">
+                                <th scope="row-md">5</th>
+                                <td> Học kỳ 5</td>
+                                <td> 8.500.000</td>
+                                <td> 2.000.000</td>
+                                <td> 700.000</td>
+                                <td> 9.800.000</td>
+                            </tr>
+                            <tr style="font-size: 12px;">
+                                <th scope="row-md">6</th>
+                                <td> Học kỳ 6</td>
+                                <td> 8.500.000</td>
+                                <td> </td>
+                                <td> 700.000</td>
+                                <td> 7.800.000</td>
+                            </tr>
+                            <tr style="font-size: 12px;">
+                                <th scope="row-md">7</th>
+                                <td> Học kỳ 7</td>
+                                <td> 9.000.000</td>
+                                <td> </td>
+                                <td> 1.200.000</td>
+                                <td> 7.800.000</td>
+                            </tr>
+                            <tr style="font-size: 12px;">
+                                <th scope="row-md">8</th>
+                                <td> Tổng cộng</td>
+                                <td> 60.000.000</td>
+                                <td> 6.000.000</td>
+                                <td> 8.700.000</td>
+                                <td> 57.300.000</td>
+                            </tr>
+                        </tbody>
+                    </div>
+                </table>
+            </div>
 
         </div>
 
@@ -287,34 +334,7 @@
         <p style="text-align: center;"><i>Học phí trên đã bao gồm giáo trình, phí thực hiện đề tài, bảo vệ tốt nghiệp và
                 học phí
                 tiếng Anh</i></p> <br>
-        <h2 style="color:#f57f26; text-align: center;" class="mt-3">HỌC PHÍ NHẬP HỌC</h2> <br>
-        <table class="table table-bordered">
-            <thead>
-                <tr class="nhaphoc-iteam1">
-                    <th colspan="2">HỌC PHÍ NHẬP HỌC</th>
-                    <th valign="top">QUỸ KHUYẾN HỌC</th>
-                    <th valign="top">ƯU ĐÃI NHẬP HỌC</th>
-                    <th valign="top">HỌC BỔNG</th>
-                    <th valign="top">TỔNG SỐ TIỀN ĐƯỢC GIẢM</th>
-                    <th valign="top">HỌC PHÍ THỰC ĐÓNG</th>
-                </tr>
-                <tr>
-                    <th style="background-color: rgb(170, 72, 72); color: aliceblue;">SỐ HỌC KỲ</th>
-                    <th style="background-color: rgb(170, 72, 72); color: aliceblue;">THÀNH TIỀN</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="table table-bordered">
-                    <td style="text-align: center;">3</td>
-                    <td style="text-align: center;">25.500.000</td>
-                    <td style="text-align: center;">2.100.000</td>
-                    <td style="text-align: center;">1.170.000</td>
-                    <td style="text-align: center;">3.300.000</td>
-                    <td style="text-align: center;">6.570.000</td>
-                    <td style="text-align: center;">18.930.000</td>
-                </tr>
-            </tbody>
-        </table>
+
 
         <ol type="1" start="2" style="font-weight: bold;">
             <li style="color:#f57f26" class="mt-3">THỜI HẠN ĐÓNG PHÍ & PHƯƠNG THỨC THANH TOÁN</li>
@@ -322,7 +342,8 @@
         <ol type="a" start="a" style="font-weight: bold;">
             <li>Thời hạn đóng phí:</li>
         </ol>
-        <li style="text-indent:17px;">Sinh viên đóng học phí vào đầu mỗi học kỳ theo thông báo của nhà trường
+        <li style="text-indent:17px; padding-left: 15px;">Sinh viên đóng học phí vào đầu mỗi học kỳ theo thông báo của
+            nhà trường
         </li>
         <br>
         <ol type="a" start="b" style="font-weight: bold;">
@@ -402,9 +423,11 @@
             </div>
         </div>
 
+        <hr style="width: 700px; height: 3px; background-color:#f87e04; margin:auto; ">
+
         <div class="footer" id="lienhe">
-            <div>
-                <p style="text-align: center; color: orange; font-size: 30px;">TRỤ SỞ CHÍNH</p>
+            <div class="truso">
+                <p style="text-align: center; color: orange; font-size: 30px; padding-top: 50px;">TRỤ SỞ CHÍNH</p>
                 <p style="text-align: center;">240 Đ.Võ Văn Ngân,Bình Thọ,Thủ Đức</p>
             </div>
             <div class="bando">
@@ -413,27 +436,20 @@
                     width="900" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="lienhe">
-                <p style="font-size: 30px;"> TRƯỜNG CAO ĐẲNG AN NINH MẠNG ISPACE</p>
-                <p><i class="bi bi-house-door"></i> 240 Đ.Võ Văn Ngân,Bình Thọ,Thủ Đức</p>
-                <p><i class="bi bi-telephone"></i> Hotline: (028) 62 678 999</p>
-                <p><i class="bi bi-envelope-at"></i> Email: lienhe@ispace.edu.vn</p>
-                <a href="https://www.facebook.com/ispace.vn">
-                    <i class="fab fa-facebook-f fa-2x"></i></a>
-
-                <a href="https://www.youtube.com/user/ispacechannel">
-                    <i style="padding-left: 20px;" class="fab fa-youtube fa-2x"></i>
-
-                    <a href="https://twitter.com/ispace_vn">
-                     <i style="padding-left: 20px;" class="fab fa-twitter fa-2x"></i></a>
-            </div>
         </div>
+        <div class="row justify-content-md-center">
 
+            <div class="col-md-12">
+                <div class="lienhe">
+                    <p style="font-size: 30px;"> TRƯỜNG CAO ĐẲNG AN NINH MẠNG ISPACE</p>
+                    <p><i class="bi bi-house-door"></i> 240 Đ.Võ Văn Ngân,Bình Thọ,Thủ Đức</p>
+                    <p><i class="bi bi-telephone"></i> Hotline: (028) 62 678 999</p>
+                    <p><i class="bi bi-envelope-at"></i> Email: lienhe@ispace.edu.vn</p>
+                </div>
+            </div>
 
-
-    </section>
-
-
+        </div>
+    </div>
 </body>
 
 </html>
